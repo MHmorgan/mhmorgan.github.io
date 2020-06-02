@@ -37,6 +37,7 @@ class CodeGuidelines extends StatelessWidget {
       ),
       body: Column(
         children: [
+
           //
           // Page title
           //
@@ -52,10 +53,15 @@ class CodeGuidelines extends StatelessWidget {
               ),
             ),
           ),
+
           //
           // Guidelines content
           //
-          Column(),
+          Column(
+            children: [
+            ],
+          ),
+
         ],
       ),
     );
