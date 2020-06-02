@@ -1,13 +1,13 @@
 Coding guidelines
 =================
 
-Rule 1
+Rule 
 ------
 
 Write a program/library that do one thing and do it well.
 
 
-Rule 2
+Rule 
 ------
 
 Restrict all code to very simple control flow constructs – do not use goto
@@ -21,6 +21,13 @@ directly help to prove that all executions that should be bounded are in fact bo
 (Note that this rule does not require that all functions have a single point of return –
 although this often also simplifies control flow. There are enough cases, though,
 where an early error return is the simpler solution.) 
+
+
+Rule 
+------
+
+Short and sweet. Maximum line width of 80 characters. Short, descriptive variable names.
+Functions should fit on a single piece of paper.
 
 
 References
