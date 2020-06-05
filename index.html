@@ -19,6 +19,10 @@
       cursor: pointer;
     }
 
+    .noselect {
+      user-select: none;
+    }
+
     @font-face {
       font-family: campton;
       src: url("assets/light.otf") format("opentype");
@@ -50,7 +54,7 @@
     <section class="mb-5" id="rule1">
       <!-- Rule title -->
       <h2 class="w-100 border border-top-0 border-left-0 border-right-0" data-toggle="collapse" data-target="#rule1-content">
-        <small class="text-muted">
+        <small class="text-muted noselect">
           Rule 1
         </small>
         <br>
@@ -96,7 +100,7 @@
     <section class="mb-5" id="rule2">
       <!-- Rule title -->
       <h2 class="w-100 border border-top-0 border-left-0 border-right-0" data-toggle="collapse" data-target="#rule2-content">
-        <small class="text-muted">
+        <small class="text-muted noselect">
           Rule 2
         </small>
         <br>
@@ -128,7 +132,7 @@
     <section class="mb-5" id="rule3">
       <!-- Rule title -->
       <h2 class="w-100 border border-top-0 border-left-0 border-right-0" data-toggle="collapse" data-target="#rule3-content">
-        <small class="text-muted">
+        <small class="text-muted noselect">
           Rule 3
         </small>
         <br>
@@ -188,7 +192,7 @@
     <section class="mb-5" id="rule4">
       <!-- Rule title -->
       <h2 class="w-100 border border-top-0 border-left-0 border-right-0" data-toggle="collapse" data-target="#rule4-content">
-        <small class="text-muted">
+        <small class="text-muted noselect">
           Rule 4
         </small>
         <br>
@@ -198,8 +202,10 @@
       </h2>
       <!-- Rule content -->
       <div id="rule4-content" class="collapse">
-        <strong>Short is readable; readable is reasonable</strong>
         <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            Short is readable; readable is reasonable
+          </li>
           <li class="list-group-item">
             Short, descriptive variable names. <q>Length is not a virtue in a name; clarity of expression is</q> <sup>[3]</sup>
           </li>
@@ -216,7 +222,7 @@
     <!-- Rule 5 -->
     <section class="mb-5" id="rule5">
       <h2 class="w-100 border border-top-0 border-left-0 border-right-0">
-        <small class="text-muted">
+        <small class="text-muted noselect">
           Rule 5
         </small>
         <br>
