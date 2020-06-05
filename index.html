@@ -1,293 +1,287 @@
-<!DOCTYPE html>
-<html>
 
-<head>
-  <meta charset="UTF-8">
-  <title>MH</title>
+  <!DOCTYPE html>
+  <html>
 
-  <!-- Favicon -->
-  <link rel="shortcut icon" type="image/png" href="assets/icon.png" />
+  <head>
+    <meta charset="UTF-8">
+    <title>MH</title>
 
-  <link href="assets/fontawesome-free-5.13.0-web/css/all.css" rel="stylesheet">
-  <link href="assets/bootstrap-4.5.0-dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- <link href="assets/boostrap-darkly.min.css" rel="stylesheet"> -->
-  <script src="assets/jquery-3.5.1.min.js"></script>
-  <script src="assets/bootstrap-4.5.0-dist/js/bootstrap.bundle.min.js"></script> <!-- includes Popper -->
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="assets/icon.png" />
 
-  <style>
-    .clickable {
-      cursor: pointer;
-    }
+    <link href="assets/fontawesome-free-5.13.0-web/css/all.css" rel="stylesheet">
+    <link href="assets/bootstrap-4.5.0-dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="assets/boostrap-darkly.min.css" rel="stylesheet"> -->
+    <script src="assets/jquery-3.5.1.min.js"></script>
+    <script src="assets/bootstrap-4.5.0-dist/js/bootstrap.bundle.min.js"></script> <!-- includes Popper -->
 
-    .noselect {
-      user-select: none;
-    }
+    <style>
+      .clickable {
+        cursor: pointer;
+      }
 
-    @font-face {
-      font-family: campton;
-      src: url("assets/light.otf") format("opentype");
-    }
+      .noselect {
+        user-select: none;
+      }
 
-    @font-face {
-      font-family: campton;
-      font-weight: bold;
-      src: url("assets/bold.otf") format("opentype");
-    }
+      @font-face {
+        font-family: campton;
+        src: url("assets/light.otf") format("opentype");
+      }
 
-    * {
-      font-family: campton;
-    }
-  </style>
-</head>
+      @font-face {
+        font-family: campton;
+        font-weight: bold;
+        src: url("assets/bold.otf") format("opentype");
+      }
 
-<body>
+      * {
+        font-family: campton;
+      }
+    </style>
+  </head>
 
+  <body>
   <header class="jumbotron jumbotron-fluid">
     <div class="container">
       <h1 class="display-3">Coding guidelines</h1>
     </div>
   </header>
-
   <main class="container">
 
-    <!-- Rule 1 -->
-    <section class="mb-5" id="rule1">
-      <!-- Rule title -->
-      <h2 class="w-100 border border-top-0 border-left-0 border-right-0" data-toggle="collapse" data-target="#rule1-content">
-        <small class="text-muted noselect">
-          Rule 1
-        </small>
-        <br>
-        <span class="clickable">
-          Write simple code
-        </span>
-      </h2>
-      <!-- Rule content -->
-      <div id="rule1-content" class="collapse">
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">
-            Simplicity is the ultimate sophistication <sup>[7]</sup>
-          </li>
-          <li class="list-group-item">
-            Use simple data structures and simple algorithms <sup>[3]</sup>
-          </li>
-          <li class="list-group-item">
-            <q>When in doubt use brute force</q> <sup>[4]</sup>
-          </li>
-          <li class="list-group-item">
-            A program/library should do one thing and do it well <sup>[2]</sup>
-            <div class="alert mb-0 text-secondary">
-              <table>
-                <tr>
-                  <td>
-                    <i class="fas fa-question-circle mr-3"></i>
-                  </td>
-                  <td>
-                    Unix got it right. While it might not be in the nature of a program to do one thing, any program can
-                    be designed as a combination of modules which do one thing. This improves testability and your
-                    ability
-                    to reason about the program and its components
-                  </td>
-                </tr>
-              </table>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Rule 2 -->
-    <section class="mb-5" id="rule2">
-      <!-- Rule title -->
-      <h2 class="w-100 border border-top-0 border-left-0 border-right-0" data-toggle="collapse" data-target="#rule2-content">
-        <small class="text-muted noselect">
-          Rule 2
-        </small>
-        <br>
-        <span class="clickable">
-          Write reasonable code
-        </span>
-      </h2>
-      <!-- Rule content -->
-      <div id="rule2-content" class="collapse">
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">
-            You must be able to reason about all parts of your design, and the design as a whole
-          </li>
-          <li class="list-group-item">
-            Simple code is reasonable
-          </li>
-          <li class="list-group-item">
-            <q>basically, avoid comments. If your code needs a comment to be understood, it would be better to rewrite it so it's easier to understand</q>
-            <sup>[3]</sup>
-          </li>
-          <li class="list-group-item">
-            Do not the use semaphores and locks to access shared data. <sup>[6]</sup> Use message passing of data without pointers to shared data or callbacks.
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Rule 3 -->
-    <section class="mb-5" id="rule3">
-      <!-- Rule title -->
-      <h2 class="w-100 border border-top-0 border-left-0 border-right-0" data-toggle="collapse" data-target="#rule3-content">
-        <small class="text-muted noselect">
-          Rule 3
-        </small>
-        <br>
-        <span class="clickable">
-          Write safe code
-        </span>
-      </h2>
-      <!-- Rule content -->
-      <div id="rule3-content" class="collapse">
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">
-            All loops and recursions must have a fixed upper bound <sup>[1]</sup>
-            <div class="alert mb-0 text-secondary">
-              <table>
-                <tr>
-                  <td>
-                    <i class="fas fa-question-circle mr-3"></i>
-                  </td>
-                  <td>
-                    Except loops that are ment to non-terminating
-                  </td>
-                </tr>
-              </table>
-            </div>
-          </li>
-          <li class="list-group-item">
-            The assertion density of the code should average to a minimum of two assertions per function <sup>[1]</sup>
-            <div class="alert mb-0 text-secondary">
-              <table>
-                <tr>
-                  <td>
-                    <i class="fas fa-question-circle mr-3"></i>
-                  </td>
-                  <td>
-                    Assertions should check for anomalous conditions that should never happen in real-life execution,
-                    and must be side-effect free. Assertions can be used to verify pre- and postconditions of functions,
-                    parameter values, return values of functions, and loopinvariants.
-                  </td>
-                </tr>
-              </table>
-            </div>
-          </li>
-          <li class="list-group-item">
-            Data objects must be declared at the smallest possible level of scope <sup>[1]</sup>
-          </li>
-          <li class="list-group-item">
-            Return values of all functions must be checked <sup>[1]</sup>
-          </li>
-          <li class="list-group-item">
-            Validity of function parameters must be checked at the start of each public function <sup>[6]</sup>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Rule 4 -->
-    <section class="mb-5" id="rule4">
-      <!-- Rule title -->
-      <h2 class="w-100 border border-top-0 border-left-0 border-right-0" data-toggle="collapse" data-target="#rule4-content">
-        <small class="text-muted noselect">
-          Rule 4
-        </small>
-        <br>
-        <span class="clickable">
-          Keep everything short
-        </span>
-      </h2>
-      <!-- Rule content -->
-      <div id="rule4-content" class="collapse">
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">
-            Short is readable; readable is reasonable
-          </li>
-          <li class="list-group-item">
-            Short, descriptive variable names. <q>Length is not a virtue in a name; clarity of expression is</q> <sup>[3]</sup>
-          </li>
-          <li class="list-group-item">
-            Functions should fit on a single piece of paper (about 60 lines of code) <sup>[1]</sup>, and take no more than 6 parameters <sup>[6]</sup>
-          </li>
-          <li class="list-group-item">
-            Keep line width within 80 characters - it's not about screen size, but readability
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Rule 5 -->
-    <section class="mb-5" id="rule5">
-      <h2 class="w-100 border border-top-0 border-left-0 border-right-0">
-        <small class="text-muted noselect">
-          Rule 5
-        </small>
-        <br>
-        Follow the Unix Philosophy
-        <small>
-          <sup>[2] [9] [10]</sup>
-        </small>
-      </h2>
-    </section>
-
-    <!-- References -->
+            <section class="mb-5">
+                <h2 class="w-100 border border-top-0 border-left-0 border-right-0" data-toggle="collapse" data-target="#rule1-content">
+                    <small class="text-muted noselect">
+                        Rule 1
+                    </small>
+                    <br>
+                    <span class="clickable">
+                        Write simple code
+                    </span>
+                </h2>
+                <div id="rule1-content" class="collapse">
+                    <ul class="list-group list-group-flush">
+        
+                <li class="list-group-item">
+                    Simplicity is the ultimate sophistication <small><sup><a href="https://quoteinvestigator.com/2015/04/02/simple/" target="_blank">[7]</a></sup></small>
+                </li>
+            
+                <li class="list-group-item">
+                    Use simple data structures and simple algorithms <small><sup><a href="https://www.lysator.liu.se/c/pikestyle.html" target="_blank">[3]</a></sup></small>
+                </li>
+            
+                <li class="list-group-item">
+                    <q>When in doubt use brute force</q> <small><sup><a href="http://wiki.c2.com/?BruteForce" target="_blank">[4]</a></sup></small>
+                </li>
+            
+                <li class="list-group-item">
+                     A program/library should do one thing and do it well <small><sup><a href="http://www.catb.org/~esr/writings/taoup/html/ch01s06.html" target="_blank">[2]</a></sup></small>
+                    <div class="alert mb-0 text-secondary">
+                        <table>
+                            <tr>
+                                <td>
+                                    <i class="fas fa-question-circle mr-3"></i>
+                                </td>
+                                <td>
+                                    Unix got it right. While it might not be in the nature of a program to do one thing, any program can be designed as a combination of modules which do one thing. This improves testability and your ability to reason about the program and its components
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+            
+                    </ul>
+                </div>
+            </section>
+        
+            <section class="mb-5">
+                <h2 class="w-100 border border-top-0 border-left-0 border-right-0" data-toggle="collapse" data-target="#rule2-content">
+                    <small class="text-muted noselect">
+                        Rule 2
+                    </small>
+                    <br>
+                    <span class="clickable">
+                        Write reasonable code
+                    </span>
+                </h2>
+                <div id="rule2-content" class="collapse">
+                    <ul class="list-group list-group-flush">
+        
+                <li class="list-group-item">
+                    You must be able to reason about all parts of your design, and the design as a whole
+                </li>
+            
+                <li class="list-group-item">
+                    Simple code is reasonable
+                </li>
+            
+                <li class="list-group-item">
+                    <q>basically, avoid comments. If your code needs a comment to be understood, it would be better to rewrite it so it's easier to understand</q> <small><sup><a href="https://www.lysator.liu.se/c/pikestyle.html" target="_blank">[3]</a></sup></small>
+                </li>
+            
+                <li class="list-group-item">
+                    Do not the use semaphores and locks to access shared data <small><sup><a href="http://itech.fgcu.edu/faculty/zalewski/CEN4935/JPL_Coding_Standard_C.pdf" target="_blank">[6]</a></sup></small>. Use message passing of data without pointers to shared data or callbacks.
+                </li>
+            
+                    </ul>
+                </div>
+            </section>
+        
+            <section class="mb-5">
+                <h2 class="w-100 border border-top-0 border-left-0 border-right-0" data-toggle="collapse" data-target="#rule3-content">
+                    <small class="text-muted noselect">
+                        Rule 3
+                    </small>
+                    <br>
+                    <span class="clickable">
+                        Write safe code
+                    </span>
+                </h2>
+                <div id="rule3-content" class="collapse">
+                    <ul class="list-group list-group-flush">
+        
+                <li class="list-group-item">
+                     All loops and recursions must have a fixed upper bound <small><sup><a href="https://en.wikipedia.org/wiki/The_Power_of_10:_Rules_for_Developing_Safety-Critical_Code" target="_blank">[1]</a></sup></small>
+                    <div class="alert mb-0 text-secondary">
+                        <table>
+                            <tr>
+                                <td>
+                                    <i class="fas fa-question-circle mr-3"></i>
+                                </td>
+                                <td>
+                                    Except loops that are ment to non-terminating
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+            
+                <li class="list-group-item">
+                     The assertion density of the code should average to a minimum of two assertions per function <small><sup><a href="https://en.wikipedia.org/wiki/The_Power_of_10:_Rules_for_Developing_Safety-Critical_Code" target="_blank">[1]</a></sup></small>
+                    <div class="alert mb-0 text-secondary">
+                        <table>
+                            <tr>
+                                <td>
+                                    <i class="fas fa-question-circle mr-3"></i>
+                                </td>
+                                <td>
+                                    Assertions should check for anomalous conditions that should never happen in real-life execution, and must be side-effect free. Assertions can be used to verify pre- and postconditions of functions, parameter values, return values of functions, and loopinvariants.
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+            
+                <li class="list-group-item">
+                    Data objects must be declared at the smallest possible level of scope <small><sup><a href="https://en.wikipedia.org/wiki/The_Power_of_10:_Rules_for_Developing_Safety-Critical_Code" target="_blank">[1]</a></sup></small>
+                </li>
+            
+                <li class="list-group-item">
+                    Return values of all functions must be checked <small><sup><a href="https://en.wikipedia.org/wiki/The_Power_of_10:_Rules_for_Developing_Safety-Critical_Code" target="_blank">[1]</a></sup></small>
+                </li>
+            
+                <li class="list-group-item">
+                    Validity of function parameters must be checked at the start of each public function <small><sup><a href="http://itech.fgcu.edu/faculty/zalewski/CEN4935/JPL_Coding_Standard_C.pdf" target="_blank">[6]</a></sup></small>
+                </li>
+            
+                    </ul>
+                </div>
+            </section>
+        
+            <section class="mb-5">
+                <h2 class="w-100 border border-top-0 border-left-0 border-right-0" data-toggle="collapse" data-target="#rule4-content">
+                    <small class="text-muted noselect">
+                        Rule 4
+                    </small>
+                    <br>
+                    <span class="clickable">
+                        Keep everything short
+                    </span>
+                </h2>
+                <div id="rule4-content" class="collapse">
+                    <ul class="list-group list-group-flush">
+        
+                <li class="list-group-item">
+                    Short is readable; readable is reasonable
+                </li>
+            
+                <li class="list-group-item">
+                    Short, descriptive variable names. <q>Length is not a virtue in a name; clarity of expression is</q> <small><sup><a href="https://www.lysator.liu.se/c/pikestyle.html" target="_blank">[3]</a></sup></small>
+                </li>
+            
+                <li class="list-group-item">
+                    Functions should fit on a single piece of paper (about 60 lines of code) <small><sup><a href="https://en.wikipedia.org/wiki/The_Power_of_10:_Rules_for_Developing_Safety-Critical_Code" target="_blank">[1]</a></sup></small>, and take no more than 6 parameters <small><sup><a href="http://itech.fgcu.edu/faculty/zalewski/CEN4935/JPL_Coding_Standard_C.pdf" target="_blank">[6]</a></sup></small>
+                </li>
+            
+                <li class="list-group-item">
+                    Keep line width within 80 characters - it's not about screen size, but readability
+                </li>
+            
+                    </ul>
+                </div>
+            </section>
+        
+            <section class="mb-5">
+                <h2 class="w-100 border border-top-0 border-left-0 border-right-0" data-toggle="collapse" data-target="#rule5-content">
+                    <small class="text-muted noselect">
+                        Rule 5
+                    </small>
+                    <br>
+                    <span class="clickable">
+                        Follow the Unix Philosophy <small><sup><a href="http://www.catb.org/~esr/writings/taoup/html/ch01s06.html" target="_blank">[2]</a></sup></small> <small><sup><a href="https://en.wikipedia.org/wiki/Unix_philosophy" target="_blank">[9]</a></sup></small> <small><sup><a href="https://opensource.com/article/18/11/revisiting-unix-philosophy-2018" target="_blank">[10]</a></sup></small>
+                    </span>
+                </h2>
+                <div id="rule5-content" class="collapse">
+                    <ul class="list-group list-group-flush">
+        
+                    </ul>
+                </div>
+            </section>
+        
     <section class="mb-5" id="references">
       <h2>References</h2>
       <ol>
+
         <li>
-          <a id="power-of-10"
-             href="https://en.wikipedia.org/wiki/The_Power_of_10:_Rules_for_Developing_Safety-Critical_Code">
-            The power of 10: Rules for developing safety critical code
-          </a>
+            <a href="https://en.wikipedia.org/wiki/The_Power_of_10:_Rules_for_Developing_Safety-Critical_Code">The power of 10: Rules for developing safety critical code</a>
         </li>
+    
         <li>
-          <a id="unix-philosophy" href="http://www.catb.org/~esr/writings/taoup/html/ch01s06.html">
-            Unix philosophy
-          </a>
+            <a href="http://www.catb.org/~esr/writings/taoup/html/ch01s06.html">Unix philosophy</a>
         </li>
+    
         <li>
-          <a id="pike-c-programming" href="https://www.lysator.liu.se/c/pikestyle.html">
-            Notes on Programming in C
-          </a>
+            <a href="https://www.lysator.liu.se/c/pikestyle.html">Notes on Programming in C</a>
         </li>
+    
         <li>
-          <a id="brute-force" href="http://wiki.c2.com/?BruteForce">
-            Brute force
-          </a>
+            <a href="http://wiki.c2.com/?BruteForce">Brute force</a>
         </li>
+    
         <li>
-          <a id="worse-is-better" href="https://wiki.c2.com/?WorseIsBetter">
-            Worse is Better
-          </a>
+            <a href="https://wiki.c2.com/?WorseIsBetter">Worse is Better</a>
         </li>
+    
         <li>
-          <a id="jpl-coding-standard" href="http://itech.fgcu.edu/faculty/zalewski/CEN4935/JPL_Coding_Standard_C.pdf">
-            JPL Institutional Coding Standard for the C Programming Language
-          </a>
+            <a href="http://itech.fgcu.edu/faculty/zalewski/CEN4935/JPL_Coding_Standard_C.pdf">JPL Institutional Coding Standard for the C Programming Language</a>
         </li>
+    
         <li>
-          <a id="simplicity-quote" href="https://quoteinvestigator.com/2015/04/02/simple/">
-            Simplicity quote
-          </a>
+            <a href="https://quoteinvestigator.com/2015/04/02/simple/">Simplicity quote</a>
         </li>
+    
         <li>
-          <a id="magical-number-seven" href="http://psychclassics.yorku.ca/Miller/">
-            The Magical Number Seven, Plus or Minus Two
-          </a>
+            <a href="http://psychclassics.yorku.ca/Miller/">The Magical Number Seven, Plus or Minus Two</a>
         </li>
+    
         <li>
-          <a id="wiki-unix-philosophy" href="https://en.wikipedia.org/wiki/Unix_philosophy">
-            Wikipedia - Unix philosophy
-          </a>
+            <a href="https://en.wikipedia.org/wiki/Unix_philosophy">Wikipedia - Unix philosophy</a>
         </li>
+    
         <li>
-          <a id="revisiting-unix-philosophy" href="https://opensource.com/article/18/11/revisiting-unix-philosophy-2018">
-            Revisiting the Unix philosophy in 2018
-          </a>
+            <a href="https://opensource.com/article/18/11/revisiting-unix-philosophy-2018">Revisiting the Unix philosophy in 2018</a>
         </li>
+    
       </ol>
     </section>
 

@@ -1,0 +1,42 @@
+#Coding guidelines
+
+= Write simple code
+- Simplicity is the ultimate sophistication [smpl]
+- Use simple data structures and simple algorithms [pike]
+- <q>When in doubt use brute force</q> [brtf]
+- A program/library should do one thing and do it well [unxp]
+? Unix got it right. While it might not be in the nature of a program to do one thing, any program can be designed as a combination of modules which do one thing. This improves testability and your ability to reason about the program and its components
+
+= Write reasonable code
+- You must be able to reason about all parts of your design, and the design as a whole
+- Simple code is reasonable
+- <q>basically, avoid comments. If your code needs a comment to be understood, it would be better to rewrite it so it's easier to understand</q> [pike]
+- Do not the use semaphores and locks to access shared data [jpl]. Use message passing of data without pointers to shared data or callbacks.
+
+= Write safe code
+- All loops and recursions must have a fixed upper bound [po10]
+? Except loops that are ment to non-terminating
+- The assertion density of the code should average to a minimum of two assertions per function [po10]
+? Assertions should check for anomalous conditions that should never happen in real-life execution, and must be side-effect free. Assertions can be used to verify pre- and postconditions of functions, parameter values, return values of functions, and loopinvariants.
+- Data objects must be declared at the smallest possible level of scope [po10]
+- Return values of all functions must be checked [po10]
+- Validity of function parameters must be checked at the start of each public function [jpl]
+
+= Keep everything short
+- Short is readable; readable is reasonable
+- Short, descriptive variable names. <q>Length is not a virtue in a name; clarity of expression is</q> [pike]
+- Functions should fit on a single piece of paper (about 60 lines of code) [po10], and take no more than 6 parameters [jpl]
+- Keep line width within 80 characters - it's not about screen size, but readability
+
+= Follow the Unix Philosophy [unxp] [wiki] [rvst]
+
+[po10]The power of 10: Rules for developing safety critical code|https://en.wikipedia.org/wiki/The_Power_of_10:_Rules_for_Developing_Safety-Critical_Code
+[unxp]Unix philosophy|http://www.catb.org/~esr/writings/taoup/html/ch01s06.html
+[pike]Notes on Programming in C|https://www.lysator.liu.se/c/pikestyle.html
+[brtf]Brute force|http://wiki.c2.com/?BruteForce
+[wrbt]Worse is Better|https://wiki.c2.com/?WorseIsBetter
+[jpl]JPL Institutional Coding Standard for the C Programming Language|http://itech.fgcu.edu/faculty/zalewski/CEN4935/JPL_Coding_Standard_C.pdf
+[smpl]Simplicity quote|https://quoteinvestigator.com/2015/04/02/simple/
+[mgl7]The Magical Number Seven, Plus or Minus Two|http://psychclassics.yorku.ca/Miller/
+[wiki]Wikipedia - Unix philosophy|https://en.wikipedia.org/wiki/Unix_philosophy
+[rvst]Revisiting the Unix philosophy in 2018|https://opensource.com/article/18/11/revisiting-unix-philosophy-2018
