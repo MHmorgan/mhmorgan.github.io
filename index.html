@@ -18,6 +18,21 @@
     .clickable {
       cursor: pointer;
     }
+
+    @font-face {
+      font-family: campton;
+      src: url("assets/light.otf") format("opentype");
+    }
+
+    @font-face {
+      font-family: campton;
+      font-weight: bold;
+      src: url("assets/bold.otf") format("opentype");
+    }
+
+    * {
+      font-family: campton;
+    }
   </style>
 </head>
 
@@ -25,7 +40,7 @@
 
   <header class="jumbotron jumbotron-fluid">
     <div class="container">
-      <h1>Coding guidelines</h1>
+      <h1 class="display-1">Coding guidelines</h1>
     </div>
   </header>
 
@@ -57,7 +72,7 @@
       </h2>
       <!-- Rule content -->
       <div id="rule2-content" class="collapse">
-        <h5>Simplicity is the ultimate sophistication <sup>[7]</sup></h5>
+        <strong>Simplicity is the ultimate sophistication <sup>[7]</sup></strong>
         <ul class="list-group">
           <li class="list-group-item">
             Use simple data structures and simple algorithms <sup>[3]</sup>
@@ -99,7 +114,7 @@
       </h2>
       <!-- Rule content -->
       <div id="rule3-content" class="collapse">
-        <h5>You must be able to reason about all parts of your design, and the design as a whole</h5>
+        <strong>You must be able to reason about all parts of your design, and the design as a whole</strong>
         <ul class="list-group">
           <li class="list-group-item">
             Simple code is reasonable
@@ -127,7 +142,7 @@
       </h2>
       <!-- Rule content -->
       <div id="rule4-content" class="collapse">
-        <h5></h5>
+        <strong></strong>
         <ul class="list-group">
           <li class="list-group-item">
             All loops and recursions must have a fixed upper bound <sup>[1]</sup>
@@ -186,7 +201,7 @@
       </h2>
       <!-- Rule content -->
       <div id="rule5-content" class="collapse">
-        <h5>Short is readable; readable is reasonable</h5>
+        <strong>Short is readable; readable is reasonable</strong>
         <ul class="list-group">
           <li class="list-group-item">
             Short, descriptive variable names. <q>Length is not a virtue in a name; clarity of expression is</q> <sup>[3]</sup>
