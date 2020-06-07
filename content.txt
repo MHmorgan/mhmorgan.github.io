@@ -12,7 +12,7 @@
 - Simple code is reasonable
 - <q>basically, avoid comments. If your code needs a comment to be understood, it would be better to rewrite it so it's easier to understand</q> [pike]
 - Do not the use semaphores and locks to access shared data [jpl]. Use message passing of data without pointers to shared data or callbacks
-- Do not write functions with unexpected side-effects
+- Functions should not have unexpected side-effects
 ? E.g. library functions which prints a message when encountering an error
 
 = Write safe code
