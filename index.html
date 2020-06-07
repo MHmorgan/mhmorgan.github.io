@@ -120,7 +120,23 @@
                 </li>
             
                 <li class="list-group-item">
-                    Do not the use semaphores and locks to access shared data <small><sup><a href="http://itech.fgcu.edu/faculty/zalewski/CEN4935/JPL_Coding_Standard_C.pdf" target="_blank">[6]</a></sup></small>. Use message passing of data without pointers to shared data or callbacks.
+                    Do not the use semaphores and locks to access shared data <small><sup><a href="http://itech.fgcu.edu/faculty/zalewski/CEN4935/JPL_Coding_Standard_C.pdf" target="_blank">[6]</a></sup></small>. Use message passing of data without pointers to shared data or callbacks
+                </li>
+            
+                <li class="list-group-item">
+                     Do not write functions with unexpected side-effects
+                    <div class="alert mb-0 text-secondary">
+                        <table>
+                            <tr>
+                                <td>
+                                    <i class="fas fa-question-circle mr-3"></i>
+                                </td>
+                                <td>
+                                    E.g. library functions which prints a message when encountering an error
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
                 </li>
             
                     </ul>
@@ -165,7 +181,7 @@
                                     <i class="fas fa-question-circle mr-3"></i>
                                 </td>
                                 <td>
-                                    Assertions should check for anomalous conditions that should never happen in real-life execution, and must be side-effect free. Assertions can be used to verify pre- and postconditions of functions, parameter values, return values of functions, and loopinvariants.
+                                    Assertions should check for anomalous conditions that should never happen in real-life execution, and must be side-effect free. Assertions can be used to verify pre- and postconditions of functions, parameter values, return values of functions, and loopinvariants
                                 </td>
                             </tr>
                         </table>

@@ -11,13 +11,15 @@
 - You must be able to reason about all parts of your design, and the design as a whole
 - Simple code is reasonable
 - <q>basically, avoid comments. If your code needs a comment to be understood, it would be better to rewrite it so it's easier to understand</q> [pike]
-- Do not the use semaphores and locks to access shared data [jpl]. Use message passing of data without pointers to shared data or callbacks.
+- Do not the use semaphores and locks to access shared data [jpl]. Use message passing of data without pointers to shared data or callbacks
+- Do not write functions with unexpected side-effects
+? E.g. library functions which prints a message when encountering an error
 
 = Write safe code
 - All loops and recursions must have a fixed upper bound [po10]
 ? Except loops that are ment to non-terminating
 - The assertion density of the code should average to a minimum of two assertions per function [po10]
-? Assertions should check for anomalous conditions that should never happen in real-life execution, and must be side-effect free. Assertions can be used to verify pre- and postconditions of functions, parameter values, return values of functions, and loopinvariants.
+? Assertions should check for anomalous conditions that should never happen in real-life execution, and must be side-effect free. Assertions can be used to verify pre- and postconditions of functions, parameter values, return values of functions, and loopinvariants
 - Data objects must be declared at the smallest possible level of scope [po10]
 - Return values of all functions must be checked [po10]
 - Validity of function parameters must be checked at the start of each public function [jpl]
