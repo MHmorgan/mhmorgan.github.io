@@ -165,8 +165,10 @@ html = '''
     <link rel="shortcut icon" type="image/png" href="assets/icon.png" />
 
     <link href="assets/fontawesome-free-5.13.0-web/css/all.css" rel="stylesheet">
+    <!--
     <link href="assets/bootstrap-4.5.0-dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- <link href="assets/boostrap-darkly.min.css" rel="stylesheet"> -->
+    -->
+    <link href="assets/flatly.min.css" rel="stylesheet">
     <script src="assets/jquery-3.5.1.min.js"></script>
     <script src="assets/bootstrap-4.5.0-dist/js/bootstrap.bundle.min.js"></script> <!-- includes Popper -->
 
@@ -200,9 +202,9 @@ html = '''
 # Page title
 html += f'''
   <body>
-  <header class="jumbotron jumbotron-fluid">
+  <header class="jumbotron jumbotron-fluid bg-primary">
     <div class="container">
-      <h1 class="display-3">{c.title.strip()}</h1>
+      <h1 class="display-3 text-white">{c.title.strip()}</h1>
     </div>
   </header>
   <main class="container">
@@ -234,11 +236,10 @@ html += '''
 
   </main>
 
-  <footer class="jumbotron jumbotron-fluid">
-    <div class="container text-center mt-4">
-      <p>Magnus Aa. Hirth</p>
-    </div>
+  <footer class="bg-light py-5">
+    <div class="container"><div class="small text-center text-muted">Magnus Aa. Hirth</div></div>
   </footer>
+
 
 </body>
 
