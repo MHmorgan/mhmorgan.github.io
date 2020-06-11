@@ -6,6 +6,8 @@
 - <q>When in doubt use brute force</q> [brtf]
 - A program/library should do one thing and do it well [unxp]
 ? Unix got it right. While it might not be in the nature of a program to do one thing, any program can be designed as a combination of modules which do one thing. This improves testability and your ability to reason about the program and its components
+- Follow the rule of three [rul3]
+? The rule of three should also be interpreted as: don't refactor before it's necessary
 
 = Write reasonable code
 - You must be able to reason about all parts of your design, and the design as a whole
@@ -42,3 +44,4 @@
 [mgl7]The Magical Number Seven, Plus or Minus Two|http://psychclassics.yorku.ca/Miller/
 [wiki]Wikipedia - Unix philosophy|https://en.wikipedia.org/wiki/Unix_philosophy
 [rvst]Revisiting the Unix philosophy in 2018|https://opensource.com/article/18/11/revisiting-unix-philosophy-2018
+[rul3]Rule of three|https://en.wikipedia.org/wiki/Rule_of_three_(computer_programming)
